@@ -586,43 +586,124 @@ export default function Home() {
 
       {/* Testimonials Section */}
       <section className="py-20 bg-gradient-to-r from-blue-700 to-green-600 text-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Ce que disent nos clients
-            </h2>
-            <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-              L'expertise et le professionnalisme de notre équipe font la différence
-            </p>
-          </div>
+  <div className="container mx-auto px-4">
+    <div className="text-center mb-16">
+      <h2 className="text-3xl md:text-4xl font-bold mb-4">
+        Ce que disent nos clients
+      </h2>
+      <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+        L'expertise et le professionnalisme de notre équipe font la différence pour les entreprises ivoiriennes
+      </p>
+    </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[1, 2, 3].map((item) => (
-              <Card key={item} className="bg-white/10 backdrop-blur-sm border-0 text-white">
-                <CardContent className="p-6">
-                  <div className="flex items-center mb-4">
-                    <div className="bg-gray-200 border-2 border-dashed rounded-xl w-16 h-16" />
-                    <div className="ml-4">
-                      <h4 className="font-bold">Jean Dupont</h4>
-                      <p className="text-blue-200">Directeur Technique, TechCorp</p>
-                    </div>
-                  </div>
-                  <p className="italic">
-                    "L'équipe ARYVOK a transformé notre infrastructure informatique. Leur expertise en architecture cloud a réduit nos coûts de 40% tout en améliorant la performance."
-                  </p>
-                  <div className="flex mt-4 text-yellow-300">
-                    {[...Array(5)].map((_, i) => (
-                      <svg key={i} className="w-5 h-5 fill-current" viewBox="0 0 24 24">
-                        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                      </svg>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {/* Témoignage 1 */}
+      <Card className="bg-white/10 backdrop-blur-sm border-0 text-white">
+        <CardContent className="p-6">
+          <div className="flex items-center mb-4">
+            <div className="bg-gray-200 border-2 border-dashed rounded-xl w-16 h-16 flex items-center justify-center text-gray-400 font-bold text-xl">
+              AD
+            </div>
+            <div className="ml-4">
+              <h4 className="font-bold">Aïssata Diabaté</h4>
+              <p className="text-blue-200">Gérante, Restaurant Le Baoulé — Abidjan</p>
+            </div>
+          </div>
+          <p className="italic">
+            "Grâce à ARYVOK, nous avons mis en place un système de gestion des commandes en ligne. 
+            Nos ventes ont augmenté et nos clients adorent la simplicité du service."
+          </p>
+          <div className="flex mt-4 text-yellow-300">
+            {[...Array(5)].map((_, i) => (
+              <svg key={i} className="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+              </svg>
             ))}
           </div>
-        </div>
-      </section>
+        </CardContent>
+      </Card>
+
+      {/* Témoignage 2 */}
+      <Card className="bg-white/10 backdrop-blur-sm border-0 text-white">
+        <CardContent className="p-6">
+          <div className="flex items-center mb-4">
+            <div className="bg-gray-200 border-2 border-dashed rounded-xl w-16 h-16 flex items-center justify-center text-gray-400 font-bold text-xl">
+              KT
+            </div>
+            <div className="ml-4">
+              <h4 className="font-bold">Koffi Tanoh</h4>
+              <p className="text-blue-200">Propriétaire, Boutique Mode Élégance — Bondoukou</p>
+            </div>
+          </div>
+          <p className="italic">
+            "L’équipe ARYVOK nous a aidés à créer notre boutique en ligne. 
+            Aujourd’hui, nos clients de toute la Côte d’Ivoire peuvent acheter nos vêtements directement depuis le site."
+          </p>
+          <div className="flex mt-4 text-yellow-300">
+            {[...Array(5)].map((_, i) => (
+              <svg key={i} className="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+              </svg>
+            ))}
+          </div>
+        </CardContent>
+      </Card>
+
+      {/* Témoignage 3 */}
+      <Card className="bg-white/10 backdrop-blur-sm border-0 text-white">
+        <CardContent className="p-6">
+          <div className="flex items-center mb-4">
+            <div className="bg-gray-200 border-2 border-dashed rounded-xl w-16 h-16 flex items-center justify-center text-gray-400 font-bold text-xl">
+              YM
+            </div>
+            <div className="ml-4">
+              <h4 className="font-bold">Yao Marcel</h4>
+              <p className="text-blue-200">Chef du Service Informatique, Mairie de Yamoussoukro</p>
+            </div>
+          </div>
+          <p className="italic">
+            "ARYVOK a modernisé notre système de gestion administrative. 
+            Nos équipes travaillent désormais plus efficacement grâce à la digitalisation des services."
+          </p>
+          <div className="flex mt-4 text-yellow-300">
+            {[...Array(4)].map((_, i) => (
+              <svg key={i} className="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+              </svg>
+            ))}
+          </div>
+        </CardContent>
+      </Card>
+
+      {/* Témoignage 4 */}
+      <Card className="bg-white/10 backdrop-blur-sm border-0 text-white">
+        <CardContent className="p-6">
+          <div className="flex items-center mb-4">
+            <div className="bg-gray-200 border-2 border-dashed rounded-xl w-16 h-16 flex items-center justify-center text-gray-400 font-bold text-xl">
+              CN
+            </div>
+            <div className="ml-4">
+              <h4 className="font-bold">Clarisse N'Guessan</h4>
+              <p className="text-blue-200">Directrice, École Les Pépinières — Abidjan</p>
+            </div>
+          </div>
+          <p className="italic">
+            "Nous avons confié à ARYVOK la création d’une plateforme de suivi des élèves. 
+            Les parents et enseignants peuvent désormais échanger en ligne, ce qui a renforcé la communication."
+          </p>
+          <div className="flex mt-4 text-yellow-300">
+            {[...Array(5)].map((_, i) => (
+              <svg key={i} className="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+              </svg>
+            ))}
+          </div>
+        </CardContent>
+      </Card>
+    </div>
+  </div>
+</section>
+
 
       {/* Contact Section */}
       <section id="contact" className="py-20 bg-gray-50">
