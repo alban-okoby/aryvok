@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 import { use, useState, useEffect } from "react";
 
 export default function Home() {
-    const [activeCategory, setActiveCategory] = useState<string | null>(null);
+  const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isVisible, setIsVisible] = useState({
     hero: false,
@@ -151,54 +151,54 @@ export default function Home() {
   ];
 
   const projects = [
-  {
-    id: 1,
-    title: "Système de gestion hospitalière",
-    category: "Architecture",
-    description: "Plateforme intégrée pour la gestion des patients et des ressources médicales",
-    technologies: ["React", "Node.js", "PostgreSQL"],
-    images: [
-      "/images/hospital-1.jpg",
-      "/images/hospital-2.jpg",
-      "/images/hospital-3.jpg"
-    ]
-  },
-  {
-    id: 2,
-    title: "Application bancaire sécurisée",
-    category: "Sécurité",
-    description: "Solution de transfert d'argent avec cryptage de bout en bout",
-    technologies: ["Java", "Spring Boot", "Oracle"],
-    images: [
-      "/images/bank-1.jpg",
-      "/images/bank-2.jpg"
-    ]
-  },
-  {
-    id: 3,
-    title: "Plateforme e-learning",
-    category: "Formation",
-    description: "Système d'apprentissage en ligne avec suivi des compétences",
-    technologies: ["Vue.js", "Firebase", "MongoDB"],
-    images: [
-      "/images/elearning-1.jpg",
-      "/images/elearning-2.jpg",
-      "/images/elearning-3.jpg"
-    ]
-  },
-  {
-    id: 4,
-    title: "Dashboard analytique",
-    category: "Bases de Données",
-    description: "Interface de visualisation de données en temps réel",
-    technologies: ["React", "D3.js", "PostgreSQL"],
-    images: [
-      "/images/dashboard-1.jpg",
-      "/images/dashboard-2.jpg",
-      "/images/dashboard-3.jpg"
-    ]
-  }
-];
+    {
+      id: 1,
+      title: "Système de gestion hospitalière",
+      category: "Architecture",
+      description: "Plateforme intégrée pour la gestion des patients et des ressources médicales",
+      technologies: ["React", "Node.js", "PostgreSQL"],
+      images: [
+        "/images/hospital-1.jpg",
+        "/images/hospital-2.jpg",
+        "/images/hospital-3.jpg"
+      ]
+    },
+    {
+      id: 2,
+      title: "Application bancaire sécurisée",
+      category: "Sécurité",
+      description: "Solution de transfert d'argent avec cryptage de bout en bout",
+      technologies: ["Java", "Spring Boot", "Oracle"],
+      images: [
+        "/images/bank-1.jpg",
+        "/images/bank-2.jpg"
+      ]
+    },
+    {
+      id: 3,
+      title: "Plateforme e-learning",
+      category: "Formation",
+      description: "Système d'apprentissage en ligne avec suivi des compétences",
+      technologies: ["Vue.js", "Firebase", "MongoDB"],
+      images: [
+        "/images/elearning-1.jpg",
+        "/images/elearning-2.jpg",
+        "/images/elearning-3.jpg"
+      ]
+    },
+    {
+      id: 4,
+      title: "Dashboard analytique",
+      category: "Bases de Données",
+      description: "Interface de visualisation de données en temps réel",
+      technologies: ["React", "D3.js", "PostgreSQL"],
+      images: [
+        "/images/dashboard-1.jpg",
+        "/images/dashboard-2.jpg",
+        "/images/dashboard-3.jpg"
+      ]
+    }
+  ];
 
 
   const stats = [
@@ -216,7 +216,7 @@ export default function Home() {
     }
   };
   return (
-      <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100">
+    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100">
       {/* Header */}
       <header className="sticky top-0 z-50 bg-white shadow-md">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
@@ -226,82 +226,82 @@ export default function Home() {
             </div>
             {/* <span className="ml-2 text-gray-700 font-medium">ESN Services</span> */}
           </div>
-          
+
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
-            <button 
-              onClick={() => scrollToSection('accueil')} 
+            <button
+              onClick={() => scrollToSection('accueil')}
               className="text-gray-600 hover:text-blue-600 transition-colors"
             >
               Accueil
             </button>
-            <button 
-              onClick={() => scrollToSection('services')} 
+            <button
+              onClick={() => scrollToSection('services')}
               className="text-gray-600 hover:text-blue-600 transition-colors"
             >
               Services
             </button>
-            <button 
-              onClick={() => scrollToSection('solutions')} 
+            <button
+              onClick={() => scrollToSection('solutions')}
               className="text-gray-600 hover:text-blue-600 transition-colors"
             >
               Nos Solutions
             </button>
-            <button 
-              onClick={() => scrollToSection('projets')} 
+            <button
+              onClick={() => scrollToSection('projets')}
               className="text-gray-600 hover:text-blue-600 transition-colors"
             >
               Projets
             </button>
-            <button 
-              onClick={() => scrollToSection('contact')} 
+            <button
+              onClick={() => scrollToSection('contact')}
               className="text-gray-600 hover:text-blue-600 transition-colors"
             >
               Contact
             </button>
           </nav>
-          
+
           {/* Mobile Menu Button */}
-          <Button 
-            variant="ghost" 
-            size="icon" 
+          <Button
+            variant="ghost"
+            size="icon"
             className="md:hidden"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </Button>
         </div>
-        
+
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden bg-white py-4 px-4 border-t">
             <div className="flex flex-col space-y-3">
-              <button 
-                onClick={() => scrollToSection('accueil')} 
+              <button
+                onClick={() => scrollToSection('accueil')}
                 className="text-left py-2 text-gray-600 hover:text-blue-600 transition-colors"
               >
                 Accueil
               </button>
-              <button 
-                onClick={() => scrollToSection('services')} 
+              <button
+                onClick={() => scrollToSection('services')}
                 className="text-left py-2 text-gray-600 hover:text-blue-600 transition-colors"
               >
                 Services
               </button>
-              <button 
-                onClick={() => scrollToSection('solutions')} 
+              <button
+                onClick={() => scrollToSection('solutions')}
                 className="text-left py-2 text-gray-600 hover:text-blue-600 transition-colors"
               >
                 Nos Solutions
               </button>
-              <button 
-                onClick={() => scrollToSection('projets')} 
+              <button
+                onClick={() => scrollToSection('projets')}
                 className="text-left py-2 text-gray-600 hover:text-blue-600 transition-colors"
               >
                 Projets
               </button>
-              <button 
-                onClick={() => scrollToSection('contact')} 
+              <button
+                onClick={() => scrollToSection('contact')}
                 className="text-left py-2 text-gray-600 hover:text-blue-600 transition-colors"
               >
                 Contact
@@ -317,7 +317,7 @@ export default function Home() {
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: isVisible.hero ? 1 : 0, y: isVisible.hero ? 0 : 20 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >
@@ -328,18 +328,18 @@ export default function Home() {
               ARYVOK accompagne les entreprises dans leur transformation digitale avec des services spécialisés
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Button 
-                size="lg" 
+              <Button
+                size="lg"
                 className="bg-white text-blue-700 hover:bg-blue-50 text-lg px-8 py-3"
                 onClick={() => scrollToSection('solutions')}
               >
                 Découvrir nos solutions
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-              <Button 
-                variant="outline" 
-                size="lg" 
-                className="border-white text-white hover:bg-white hover:text-blue-700 text-lg px-8 py-3"
+              <Button
+                variant="outline"
+                size="lg"
+                className="bg-white text-blue-700 hover:bg-blue-50 text-lg px-8 py-3"
                 onClick={() => scrollToSection('projets')}
               >
                 <Play className="mr-2 h-5 w-5" />
@@ -391,13 +391,13 @@ export default function Home() {
               <motion.div
                 key={service.id}
                 initial={{ opacity: 0, y: 20 }}
-                animate={{ 
-                  opacity: isVisible.services ? 1 : 0, 
-                  y: isVisible.services ? 0 : 20 
+                animate={{
+                  opacity: isVisible.services ? 1 : 0,
+                  y: isVisible.services ? 0 : 20
                 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <Card 
+                <Card
                   className="border border-gray-200 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300"
                 >
                   <CardHeader className="bg-gray-50 border-b">
@@ -408,22 +408,21 @@ export default function Home() {
                           {service.title}
                         </CardTitle>
                       </div>
-                      <Button 
-                        variant="ghost" 
+                      <Button
+                        variant="ghost"
                         size="icon"
                         onClick={() => toggleCategory(service.id)}
                         className="text-gray-500 hover:text-blue-600"
                       >
-                        <ChevronDown 
-                          className={`h-5 w-5 transition-transform ${
-                            activeCategory === service.id ? 'rotate-180' : ''
-                          }`} 
+                        <ChevronDown
+                          className={`h-5 w-5 transition-transform ${activeCategory === service.id ? 'rotate-180' : ''
+                            }`}
                         />
                       </Button>
                     </div>
                     <p className="text-gray-600 mt-2">{service.description}</p>
                   </CardHeader>
-                  
+
                   {activeCategory === service.id && (
                     <motion.div
                       initial={{ height: 0, opacity: 0 }}
@@ -471,9 +470,9 @@ export default function Home() {
               <motion.div
                 key={solution.id}
                 initial={{ opacity: 0, y: 20 }}
-                animate={{ 
-                  opacity: isVisible.solutions ? 1 : 0, 
-                  y: isVisible.solutions ? 0 : 20 
+                animate={{
+                  opacity: isVisible.solutions ? 1 : 0,
+                  y: isVisible.solutions ? 0 : 20
                 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
@@ -496,8 +495,8 @@ export default function Home() {
                         </li>
                       ))}
                     </ul>
-                    <Button 
-                      variant="outline" 
+                    <Button
+                      variant="outline"
                       className="w-full mt-6 border-blue-600 text-blue-600 hover:bg-blue-50"
                       onClick={() => scrollToSection('contact')}
                     >
@@ -513,77 +512,77 @@ export default function Home() {
 
       {/* Projects Section */}
       <section id="projets" className="py-20 bg-gray-50">
-  <div className="container mx-auto px-4">
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: isVisible.projets ? 1 : 0, y: isVisible.projets ? 0 : 20 }}
-      transition={{ duration: 0.6 }}
-      className="text-center mb-16"
-    >
-      <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-        Nos Projets Réalisés
-      </h2>
-      <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-        Découvrez quelques-unes de nos réalisations illustrées avec des interfaces réelles
-      </p>
-    </motion.div>
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: isVisible.projets ? 1 : 0, y: isVisible.projets ? 0 : 20 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+              Nos Projets Réalisés
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Découvrez quelques-unes de nos réalisations illustrées avec des interfaces réelles
+            </p>
+          </motion.div>
 
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-      {projects.map((project, index) => (
-        <motion.div
-          key={project.id}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{
-            opacity: isVisible.projets ? 1 : 0,
-            y: isVisible.projets ? 0 : 20
-          }}
-          transition={{ duration: 0.5, delay: index * 0.1 }}
-        >
-          <Card className="border border-gray-200 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 h-full flex flex-col">
-            {/* Galerie d’images */}
-            <div className="grid grid-cols-3 gap-1 h-40 overflow-hidden">
-              {project.images.map((img: any, i: any) => (
-                <div key={i} className="relative w-full h-full">
-                  <Image
-                    src={img}
-                    alt={`${project.title} image ${i + 1}`}
-                    fill
-                    className="object-cover hover:scale-105 transition-transform duration-500"
-                  />
-                </div>
-              ))}
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {projects.map((project, index) => (
+              <motion.div
+                key={project.id}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{
+                  opacity: isVisible.projets ? 1 : 0,
+                  y: isVisible.projets ? 0 : 20
+                }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <Card className="border border-gray-200 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 h-full flex flex-col">
+                  {/* Galerie d’images */}
+                  <div className="grid grid-cols-3 gap-1 h-40 overflow-hidden">
+                    {project.images.map((img: any, i: any) => (
+                      <div key={i} className="relative w-full h-full">
+                        <Image
+                          src={img}
+                          alt={`${project.title} image ${i + 1}`}
+                          fill
+                          className="object-cover hover:scale-105 transition-transform duration-500"
+                        />
+                      </div>
+                    ))}
+                  </div>
 
-            <CardHeader>
-              <div className="flex justify-between items-start">
-                <CardTitle className="text-xl font-bold text-gray-800">
-                  {project.title}
-                </CardTitle>
-                <span className="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">
-                  {project.category}
-                </span>
-              </div>
-              <p className="text-gray-600 mt-2">{project.description}</p>
-            </CardHeader>
+                  <CardHeader>
+                    <div className="flex justify-between items-start">
+                      <CardTitle className="text-xl font-bold text-gray-800">
+                        {project.title}
+                      </CardTitle>
+                      <span className="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">
+                        {project.category}
+                      </span>
+                    </div>
+                    <p className="text-gray-600 mt-2">{project.description}</p>
+                  </CardHeader>
 
-            <CardContent className="mt-auto">
-              <div className="flex flex-wrap gap-2">
-                {project.technologies.map((tech, i) => (
-                  <span
-                    key={i}
-                    className="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
-            </CardContent>
-          </Card>
-        </motion.div>
-      ))}
-    </div>
-  </div>
-</section>
+                  <CardContent className="mt-auto">
+                    <div className="flex flex-wrap gap-2">
+                      {project.technologies.map((tech, i) => (
+                        <span
+                          key={i}
+                          className="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Testimonials Section */}
       <section className="py-20 bg-gradient-to-r from-blue-700 to-green-600 text-white">
@@ -614,7 +613,7 @@ export default function Home() {
                   <div className="flex mt-4 text-yellow-300">
                     {[...Array(5)].map((_, i) => (
                       <svg key={i} className="w-5 h-5 fill-current" viewBox="0 0 24 24">
-                        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                        <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
                       </svg>
                     ))}
                   </div>
@@ -709,8 +708,8 @@ export default function Home() {
                       placeholder="Votre message..."
                     ></textarea>
                   </div>
-                  <Button 
-                    type="submit" 
+                  <Button
+                    type="submit"
                     className="w-full bg-gradient-to-r from-blue-600 to-green-500 hover:from-blue-700 hover:to-green-600 text-white py-3"
                   >
                     Envoyer le message
@@ -731,13 +730,13 @@ export default function Home() {
                 <div className="bg-gradient-to-r from-blue-600 to-green-500 text-white font-bold text-xl px-3 py-2 rounded">
                   ARYVOK
                 </div>
-                <span className="ml-2 font-medium">ESN Services</span>
+                {/* <span className="ml-2 font-medium">ESN Services</span> */}
               </div>
               <p className="text-gray-400">
                 Expertise IT et solutions numériques pour accompagner votre transformation digitale.
               </p>
             </div>
-            
+
             <div>
               <h4 className="text-lg font-semibold mb-4">Services</h4>
               <ul className="space-y-2 text-gray-400">
@@ -747,45 +746,45 @@ export default function Home() {
                 <li>Architecture</li>
               </ul>
             </div>
-            
+
             <div>
               <h4 className="text-lg font-semibold mb-4">Liens Rapides</h4>
               <ul className="space-y-2 text-gray-400">
                 <li>
-                  <button 
-                    onClick={() => scrollToSection('accueil')} 
+                  <button
+                    onClick={() => scrollToSection('accueil')}
                     className="hover:text-white transition-colors"
                   >
                     Accueil
                   </button>
                 </li>
                 <li>
-                  <button 
-                    onClick={() => scrollToSection('services')} 
+                  <button
+                    onClick={() => scrollToSection('services')}
                     className="hover:text-white transition-colors"
                   >
                     Services
                   </button>
                 </li>
                 <li>
-                  <button 
-                    onClick={() => scrollToSection('solutions')} 
+                  <button
+                    onClick={() => scrollToSection('solutions')}
                     className="hover:text-white transition-colors"
                   >
                     Nos Solutions
                   </button>
                 </li>
                 <li>
-                  <button 
-                    onClick={() => scrollToSection('projets')} 
+                  <button
+                    onClick={() => scrollToSection('projets')}
                     className="hover:text-white transition-colors"
                   >
                     Projets
                   </button>
                 </li>
                 <li>
-                  <button 
-                    onClick={() => scrollToSection('contact')} 
+                  <button
+                    onClick={() => scrollToSection('contact')}
                     className="hover:text-white transition-colors"
                   >
                     Contact
@@ -793,7 +792,7 @@ export default function Home() {
                 </li>
               </ul>
             </div>
-            
+
             <div>
               <h4 className="text-lg font-semibold mb-4">Contact</h4>
               <address className="not-italic text-gray-400">
@@ -803,7 +802,7 @@ export default function Home() {
               </address>
             </div>
           </div>
-          
+
           <div className="border-t border-gray-700 mt-10 pt-6 text-center text-gray-400">
             <p>&copy; {new Date().getFullYear()} ARYVOK. Tous droits réservés.</p>
           </div>
